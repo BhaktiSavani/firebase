@@ -43,12 +43,17 @@ public class MainActivity extends AppCompatActivity {
                 {
                    // System.out.println("name :" +snap.child("name").getValue().toString());
                     Github git =snap.getValue(Github.class);
-                    System.out.println(git.getId()+" "+git.watchers+" "+git.full_name);
+                  //  System.out.println(git.getId()+" "+git.watchers+" "+git.full_name);
+
+                    vals.add(git);
+
                 }
+                System.out.println("ArrayList" +vals.size());
+                for(int i=0;i<vals.size();i++)
+                {
+                    System.out.println(vals.get(i).getId()+" "+vals.get(i).getFull_name() +" "+ vals.get(i).getWatchers());
 
-
-
-
+                }
             }
 
             @Override
